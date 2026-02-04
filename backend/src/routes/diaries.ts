@@ -1,4 +1,5 @@
 import express from 'express'
+import getInfoSSOO from './nodeOSInfo';
 
 /**
  * * Los router son como unos manejadores o handlers donde vamos 
@@ -12,7 +13,7 @@ import express from 'express'
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.send('Fetching diary routes (GET)');
+    res.send(getInfoSSOO());
 });
 
 router.post('/', (req, res) => {
