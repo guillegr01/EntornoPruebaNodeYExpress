@@ -16,7 +16,9 @@ app.get('/ping', (_req, res) => {
 
 /** 
  * * Asi es como asignamos a una ruta principal el router, dentro de esa ruta habrá
- * * subrutas (las definidas en el router) que ejecutarán la correspondiente función del endpoint 
+ * * subrutas (las definidas en el router) que ejecutarán la correspondiente función del endpoint
+ * * El método .use() hace que cualquier request (GET,POST,PUT,etc) que haya en la dirección que hemos
+ * * establecido (api/diaries) pase por el diaryRoutes y ahi ya se ejecutará el endpoint correspondiente.
  */
 app.use('/api/diaries', diaryRoutes);
 
